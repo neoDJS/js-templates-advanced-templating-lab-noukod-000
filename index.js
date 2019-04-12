@@ -25,7 +25,14 @@ function handlebarsRegisters(){
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
 }
 
-function handleSubmit(){}
+function handleSubmit(){
+    let state = document.getElementById('formState').value;
+    if(state === 'New'){
+      createRecipe();
+    } else if(state === 'Edit'){
+      updateRecipe();
+    }
+}
 
 function getRecipe(){
   let recipe = {ingredients:[]};
