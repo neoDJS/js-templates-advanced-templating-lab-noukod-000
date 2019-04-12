@@ -11,9 +11,7 @@
     </main>
     <script id="recipe-form-template" type="text/x-handlebars-template">
       <h1>{{formLegend}}</h1>
-      <form id="recipe-form" onsubmit="handleSubmit();return false;">
-        {{> recipeFormPartial}}
-      </form>
+      {{> recipeFormPartial}}
     </script>
     <script id="recipe-template" type="text/x-handlebars-template">
       <h2 id="recipeName">{{name}}</h2>
@@ -31,16 +29,18 @@
       </div>
     </script>
     <script id="recipe-form-partial" type="text/x-handlebars-template">
-      <input type="hidden" id="formState" value="{{state}}"><br>
-      Name: <input type="text" id="name"  value="{{name}}"><br>
-      Description: <input type="textarea" id="description" value="{{description}}"><br>
-      <h3>Ingredients:</h3>
-      <ul>
-        {{#each ingredients}}
-          <li name="ingredientElem">{{displayIngredient this}}<br></li>
-        {{/each}}
-      </ul>
-      <input type="submit">
+      <form id="recipe-form" onsubmit="handleSubmit();return false;">
+        <input type="hidden" id="formState" value="{{state}}"><br>
+        Name: <input type="text" id="name"  value="{{name}}"><br>
+        Description: <input type="textarea" id="description" value="{{description}}"><br>
+        <h3>Ingredients:</h3>
+        <ul>
+          {{#each ingredients}}
+            <li name="ingredientElem">{{displayIngredient this}}<br></li>
+          {{/each}}
+        </ul>
+        <input type="submit">
+      </form>
     </script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
