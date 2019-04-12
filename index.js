@@ -22,9 +22,9 @@ function getRecipe(){
   recipe.name = document.getElementById('name').value;
   recipe.description = document.getElementById('description').value;
   let ingredients = document.getElementsByClassName('ingredients');
-  for(let i=0;i< NodeElement.length; i++){
-    if(NodeElement[i].value){
-      recipe.ingredients.push({name: NodeElement[i].value})}
+  for(let i=0;i< ingredients.length; i++){
+    if(ingredients[i].value){
+      recipe.ingredients.push({name: ingredients[i].value})}
   }
 
   return recipe;
