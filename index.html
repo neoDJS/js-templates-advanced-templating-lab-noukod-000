@@ -10,8 +10,9 @@
     <main id="main">
     </main>
     <script id="recipe-form-template" type="text/x-handlebars-template">
-      <input type="hidden" id="formState" value="{{state}}"><br>
+      <h1>{{formLegend}}</h1>
       <form id="recipe-form" onsubmit="handleSubmit();return false;">
+        <input type="hidden" id="formState" value="{{state}}"><br>
         Name: <input type="text" id="name"><br>
         Description: <input type="textarea" id="description"><br>
         <h3>Ingredients:</h3>
