@@ -15,7 +15,7 @@ function handlebarsRegisters(){
   Handlebars.registerHelper('displayIngredient',function(){
     let state = document.getElementById('formState').value;
     if(state === 'New'){
-      return new Handlebars.SafeString('<input name="ingredients" type="text"><input name="ingredients" type="text"><input name="ingredients" type="text"><input name="ingredients" type="text"><input name="ingredients" type="text"><input name="ingredients" type="text">');
+      return new Handlebars.SafeString('');
     } else if(state === 'Edit'){
       return new Handlebars.SafeString('<input name="ingredients" type="text" value=""+this.name+"">');
     } else {
