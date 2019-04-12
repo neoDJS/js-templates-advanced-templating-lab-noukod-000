@@ -34,11 +34,11 @@
         Name: <input type="text" id="name"  value="{{name}}"><br>
         Description: <input type="textarea" id="description" value="{{description}}"><br>
         <h3>Ingredients:</h3>
-        <ul>
           {{#each ingredients}}
-            <li name="ingredientElem">{{displayIngredient this}}<br></li>
+            {{displayIngredient this}}
+          {{else}}  
+          {{displayIngredient}}
           {{/each}}
-        </ul>
         <input type="submit">
       </form>
     </script>
