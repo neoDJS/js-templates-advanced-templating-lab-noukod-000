@@ -1,5 +1,16 @@
 function init() {
   //put any page initialization/handlebars initialization here
+  handlebarsRegisters();
+
+  let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  document.getElementById('main').innerHTML = recipeFormTemplateFn( {state: "New"} );
+}
+document.addEventListener("DOMContentLoaded", function(event) {
+  init()
+})
+
+
+function handlebarsRegisters(){
   Handlebars.registerPartial('recipeDetailsPartial',document.getElementById('recipe-details-partial').innerHTML);
   Handlebars.registerHelper('displayIngredient',function(){
     let state = document.getElementById('formState').value;
@@ -9,14 +20,8 @@ function init() {
       return new Handlebars.SafeString(this.name);
     }
   });
-
-  let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementById('main').innerHTML = recipeFormTemplateFn( {state: "New"} );
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
 }
-document.addEventListener("DOMContentLoaded", function(event) {
-  init()
-})
-
 
 function handleSubmit(){}
 
