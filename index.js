@@ -2,7 +2,7 @@ function init() {
   //put any page initialization/handlebars initialization here
   Handlebars.registerPartial('recipeDetailsPartial',document.getElementById('recipe-details-partial').innerHTML);
   Handlebars.registerHelper('displayIngredient',function(){
-    let state = document.getElementById('name').value;
+    let state = document.getElementById('formState').value;
     if(state === 'New'){
       return new Handlebars.SafeString(<input name="ingredients" type="text">);
     } else {
