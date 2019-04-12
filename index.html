@@ -32,7 +32,7 @@
         <p id="recipeDescription">{{description}}</p>
         <ul>
           {{#each ingredients}}
-          <li>{{displayIngredient this}}</li>
+          <li name="ingredient">{{displayIngredient this}}</li>
           {{/each}}
         </ul>
       </div>
