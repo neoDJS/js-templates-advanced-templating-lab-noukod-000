@@ -45,7 +45,7 @@ function updateRecipe() {
 }
 
 function displayEditForm(){
-  let recipe = {ingredients:[],formLegend: "Edit Recipe", submitFunction: 'updateRecipe()'};
+  let recipe = {ingredients:[]};
   recipe.name = document.getElementById("recipeName").innerText;
   recipe.description = document.getElementById("recipeDescription").innerText;
   let NodeElement = document.getElementsByName("ingredientsList")
