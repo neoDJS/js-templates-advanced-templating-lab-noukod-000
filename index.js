@@ -11,7 +11,7 @@ function init() {
   });
 
   let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementById('main').innerHTML = recipeFormTemplateFn( );
+  document.getElementById('main').innerHTML = recipeFormTemplateFn( {state: "New"} );
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
