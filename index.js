@@ -8,9 +8,7 @@ function init() {
   });
 
   let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementById('main').innerHTML = recipeFormTemplateFn(
-    {formLegend: 'New Recipe', submitFunction: 'createRecipe()'}
-  );
+  document.getElementById('main').innerHTML = recipeFormTemplateFn( );
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
