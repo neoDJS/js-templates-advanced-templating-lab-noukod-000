@@ -3,7 +3,7 @@ function init() {
   handlebarsRegisters();
 
   let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementById('main').innerHTML = recipeFormTemplateFn( {formLegend: 'New Recipe', handleSubmit: 'createRecipe()', state: "New"} );
+  document.getElementById('main').innerHTML = recipeFormTemplateFn( {formLegend: 'New Recipe', state: "New"} );
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
@@ -22,6 +22,8 @@ function handlebarsRegisters(){
   });
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
 }
+
+function handleSubmit(){}
 
 function getRecipe(){
   let recipe = {ingredients:[]};
