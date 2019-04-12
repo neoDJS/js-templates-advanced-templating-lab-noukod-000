@@ -21,10 +21,11 @@ function getRecipe(){
   let recipe = {ingredients:[]};
   recipe.name = document.getElementById('name').value;
   recipe.description = document.getElementById('description').value;
-  let ingredients = document.getElementsByName('ingredients');
-  for(let i=0;i< ingredients.length; i++){
-    if(ingredients[i].value){
-      recipe.ingredients.push({name: ingredients[i].value})}
+  let ingredientElem = document.getElementsByName('ingredients');
+  for(let i=0;i< ingredientElem.length; i++){
+    if(ingredientElem[i].value){
+      recipe.ingredients.push({name: ingredientElem[i].value})
+    }
   }
 
   return recipe;
