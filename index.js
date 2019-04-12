@@ -16,6 +16,8 @@ function handlebarsRegisters(){
     let state = document.getElementById('formState').value;
     if(state === 'New'){
       return new Handlebars.SafeString('<input name="ingredients" type="text">');
+    } else if(state === 'Edit'){
+      return new Handlebars.SafeString('<input name="ingredients" type="text" value=""+this.name+"">');
     } else {
       return new Handlebars.SafeString(this.name);
     }
