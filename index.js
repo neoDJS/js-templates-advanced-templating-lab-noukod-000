@@ -48,10 +48,10 @@ function displayEditForm(){
   let recipe = {ingredients:[]};
   recipe.name = document.getElementById("recipeName").innerText;
   recipe.description = document.getElementById("recipeDescription").innerText;
-  let NodeElement = document.getElementsByName("ingredientsList")
+  let ingredientsElem = document.getElementsByName("ingredientsList")
 
-  for(let i=0;i< NodeElement.length; i++){
-      recipe.ingredients.push({name: NodeElement[i].innerText})
+  for(let i=0;i< ingredientsElem.length; i++){
+      recipe.ingredients.push({name: ingredientsElem[i].innerText})
   }
 
   let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
