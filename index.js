@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 
-
+function handleSubmit(){}
 
 function getRecipe(){
   let recipe = {ingredients:[]};
