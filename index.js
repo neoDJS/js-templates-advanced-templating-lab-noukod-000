@@ -5,9 +5,9 @@ function init() {
     let state = document.getElementById('name').value;
     if(state === 'New'){
       return new Handlebars.SafeString(<input name="ingredients" type="text" value=""+this.name+"">);
-    } else {}
-
-    return new Handlebars.SafeString(this.name);
+    } else {
+      return new Handlebars.SafeString(this.name);
+    }
   });
 
   let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
