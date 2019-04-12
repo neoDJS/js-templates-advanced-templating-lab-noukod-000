@@ -6,7 +6,7 @@ function init() {
     if(state === 'New'){
       return new Handlebars.SafeString(<input name="ingredients" type="text" value="{{this.name}}">);
     } else {}
-    
+
     return new Handlebars.SafeString(this.name);
   });
 
