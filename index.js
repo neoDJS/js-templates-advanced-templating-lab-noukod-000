@@ -54,7 +54,7 @@ function updateRecipe() {
 }
 
 function displayEditForm(){
-  let recipe = {ingredients:[]};
+  let recipe = {ingredients:[], formLegend: 'Edit Recipe', state: "Edit"};
   recipe.name = document.getElementById("recipeName").innerText;
   recipe.description = document.getElementById("recipeDescription").innerText;
   let ingredientsElem = document.getElementsByName("ingredientName")
@@ -65,5 +65,5 @@ function displayEditForm(){
 
   let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
 
-  document.getElementById('main').innerHTML = recipeFormTemplateFn( recipe, {formLegend: 'Edit Recipe', state: "Edit"});
+  document.getElementById('main').innerHTML = recipeFormTemplateFn( recipe );
 }
