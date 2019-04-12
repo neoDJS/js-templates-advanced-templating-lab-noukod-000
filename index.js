@@ -60,5 +60,5 @@ function displayEditForm(){
 
   let recipeFormTemplateFn = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
 
-  document.getElementById('main').innerHTML = recipeFormTemplateFn( recipe );
+  document.getElementById('main').innerHTML = recipeFormTemplateFn( recipe , state: "Edit");
 }
