@@ -4,7 +4,7 @@ function init() {
   Handlebars.registerHelper('displayIngredient',function(){
     let state = document.getElementById('formState').value;
     if(state === 'New'){
-      return new Handlebars.SafeString(<input name="ingredients" type="text">);
+      return new Handlebars.SafeString('<input name="ingredients" type="text">');
     } else {
       return new Handlebars.SafeString(this.name);
     }
