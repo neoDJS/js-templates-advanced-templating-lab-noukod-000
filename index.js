@@ -2,6 +2,11 @@ function init() {
   //put any page initialization/handlebars initialization here
   Handlebars.registerPartial('recipeDetailsPartial',document.getElementById('recipe-details-partial').innerHTML);
   Handlebars.registerHelper('displayIngredient',function(){
+    let state = document.getElementById('name').value;
+    if(state === 'New'){
+      return new Handlebars.SafeString(<input name="ingredients" type="text" value="{{this.name}}">);
+    } else {}
+    
     return new Handlebars.SafeString(this.name);
   });
 
